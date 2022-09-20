@@ -16,5 +16,9 @@ router.patch(
   upload.single("avatar"),
   ctrlWrapper(ctrl.updateAvatar)
 );
+router.get(
+  "/verify/:verificationToken",
+  controllerWrapper(controller.verifyEmail)
+);
 
 module.exports = router;
